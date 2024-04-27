@@ -42,7 +42,7 @@
           <div class="row justify-content-end">
             <div class="col-sm-10">
               <button type="submit" class="btn btn-primary">{{ $do }}</button>
-              <a href="{{ url('activity') }}" type="button" class="btn btn-outline-secondary">kembali</a>
+              <a href="{{ url('partner') }}" type="button" class="btn btn-outline-secondary">kembali</a>
             </div>
           </div>
         </form>
