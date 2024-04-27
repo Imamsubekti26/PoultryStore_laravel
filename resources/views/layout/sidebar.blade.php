@@ -1,6 +1,6 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
   <div class="app-brand demo">
-    <a href="index.html" class="app-brand-link">
+    <a href="{{ url('/') }}" class="app-brand-link">
       <span class="app-brand-text demo menu-text fw-bolder ms-2">PoulStore</span>
     </a>
 
@@ -14,39 +14,71 @@
   <ul class="menu-inner py-1">
     <!-- Dashboard -->
     <li class="menu-item">
-      <a href="index.html" class="menu-link">
+      <a href="{{ url('/') }}" class="menu-link">
         <i class="menu-icon tf-icons bx bx-home-circle"></i>
-        <div data-i18n="Analytics">Dashboard</div>
+        <div>Dashboard</div>
       </a>
     </li>
 
-    <!-- Components -->
-    <li class="menu-header small text-uppercase"><span class="menu-header-text">Components</span></li>
-    <!-- Cards -->
-    <li class="menu-item">
-      <a href="cards-basic.html" class="menu-link">
+    <!-- Penjadwalan -->
+    <li class="menu-header small text-uppercase"><span class="menu-header-text">Penjadwalan</span></li>
+    <!-- Trip -->
+    <li @class(['menu-item', 'active' => $selected_menu == 'trip'])>
+      <a href="{{ url('/trip') }}" class="menu-link">
         <i class="menu-icon tf-icons bx bx-collection"></i>
-        <div data-i18n="Basic">Cards</div>
+        <div>Trip</div>
       </a>
     </li>
-    <!-- User interface -->
-    <li class="menu-item">
-      <a href="javascript:void(0)" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-box"></i>
-        <div data-i18n="User interface">User interface</div>
+    <!-- Aktifitas -->
+    <li @class(['menu-item', 'active' => $selected_menu == 'activity'])>
+      <a href="{{ url('/activity') }}" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-collection"></i>
+        <div>Aktifitas</div>
       </a>
+    </li>
+
+    <!-- Sumber Daya -->
+    <li class="menu-header small text-uppercase"><span class="menu-header-text">Sumber Daya</span></li>
+    <!-- Karyawan -->
+    <li @class([
+      'menu-item', 
+      'active' => $selected_menu == 'employee' || $selected_menu == 'salary',
+      'open' => $selected_menu == 'employee' || $selected_menu == 'salary',
+      ])">
+      <a class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons bx bx-layout"></i>
+        <div>Karyawan</div>
+      </a>
+
       <ul class="menu-sub">
-        <li class="menu-item">
-          <a href="ui-accordion.html" class="menu-link">
-            <div data-i18n="Accordion">Accordion</div>
+        <li @class(['menu-item', 'active' => $selected_menu == 'employee'])>
+          <a href="{{ url('/employee') }}" class="menu-link">
+            <div>Daftar Karyawan</div>
           </a>
         </li>
-        <li class="menu-item">
-          <a href="ui-alerts.html" class="menu-link">
-            <div data-i18n="Alerts">Alerts</div>
+        <li @class(['menu-item', 'active' => $selected_menu == 'salary'])>
+          <a href="{{ url('salary') }}" class="menu-link">
+            <div>Gaji</div>
           </a>
         </li>
       </ul>
+    </li>
+    <!-- Mobil -->
+    <li @class(['menu-item', 'active' => $selected_menu == 'car'])>
+      <a href="{{ url('/car') }}" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-collection"></i>
+        <div>Mobil</div>
+      </a>
+    </li>
+
+    <!-- Mitra -->
+    <li class="menu-header small text-uppercase"><span class="menu-header-text">Mitra</span></li>
+    <!-- Mitra -->
+    <li @class(['menu-item', 'active' => $selected_menu == 'partner'])>
+      <a href="{{ url('partner') }}" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-collection"></i>
+        <div>Mitra</div>
+      </a>
     </li>
 
   </ul>

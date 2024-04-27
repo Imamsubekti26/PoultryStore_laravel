@@ -9,6 +9,7 @@ class ActivityController extends Controller
     public function index()
     {
         $data['title'] = 'Aktifitas';
+        $data['selected_menu'] = 'activity';
         return view('activity.main', $data);
     }
 
@@ -16,6 +17,7 @@ class ActivityController extends Controller
     {
         $data['do'] = 'Tambah';
         $data['title'] = 'Aktifitas';
+        $data['selected_menu'] = 'activity';
         return view('activity.form', $data);
     }
 
@@ -23,6 +25,7 @@ class ActivityController extends Controller
     {
         $data['do'] = 'Edit';
         $data['title'] = 'Aktifitas';
+        $data['selected_menu'] = 'activity';
         return view('activity.form', $data);
     }
 
