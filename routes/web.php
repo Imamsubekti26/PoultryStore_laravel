@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\partnerController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,3 +33,7 @@ Route::get('car/edit/{id}', [CarController::class, 'edit']);
 Route::get('partner', [PartnerController::class, 'index']);
 Route::get('partner/tambah', [PartnerController::class, 'create']);
 Route::get('partner/edit/{id}', [partnerController::class, 'edit']);
+
+Route::get('employee', [EmployeeController::class, 'index']);
+Route::get('employee/tambah', [EmployeeController::class, 'create']);
+Route::get('employee/edit/{id}', [EmployeeController::class, 'edit']);
