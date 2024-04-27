@@ -12,7 +12,7 @@
     
     <div class="navbar-nav align-items-center">
       <div class="nav-item d-flex align-items-center">
-        <h4 class="my-0 fw-semibold">Judul Kasih Sini</h4>
+        <h4 class="my-0 fw-semibold">{{ $title }}</h4>
       </div>
     </div>
 
