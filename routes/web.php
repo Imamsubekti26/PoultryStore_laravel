@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\partnerController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -27,3 +28,7 @@ Route::get('activity/edit/{id}', [ActivityController::class, 'edit']);
 Route::get('car', [CarController::class, 'index']);
 Route::get('car/tambah', [CarController::class, 'create']);
 Route::get('car/edit/{id}', [CarController::class, 'edit']);
+
+Route::get('partner', [PartnerController::class, 'index']);
+Route::get('partner/tambah', [PartnerController::class, 'create']);
+Route::get('partner/edit/{id}', [partnerController::class, 'edit']);
