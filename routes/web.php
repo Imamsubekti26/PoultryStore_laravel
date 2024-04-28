@@ -4,6 +4,7 @@ use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\partnerController;
+use App\Http\Controllers\TripController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,7 +20,7 @@ Route::get('/kegiatan/form', function(){
 });
 
 Route::get('/login', function(){
-    return view('login');
+    return view('login', ['title' => 'login']);
 });
 
 Route::get('activity', [ActivityController::class, 'index']);
@@ -37,3 +38,7 @@ Route::get('partner/edit/{id}', [partnerController::class, 'edit']);
 Route::get('employee', [EmployeeController::class, 'index']);
 Route::get('employee/tambah', [EmployeeController::class, 'create']);
 Route::get('employee/edit/{id}', [EmployeeController::class, 'edit']);
+
+Route::get('trip', [TripController::class, 'index']);
+Route::get('trip/tambah', [TripController::class, 'create']);
+Route::get('trip/edit/{id}', [TripController::class, 'edit']);
