@@ -21,6 +21,7 @@
               <input type="text" class="form-control" id="merk" placeholder="ex: Mitsubishi Colt L300">
             </div>
           </div>
+          @if ($do == "Edit")
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="kondisi">Kondisi</label>
             <div class="col-sm-10">
@@ -32,6 +33,7 @@
               </select>
             </div>
           </div>
+          @endif
           <div class="row justify-content-end">
             <div class="col-sm-10">
               <button type="submit" class="btn btn-primary">{{ $do }}</button>

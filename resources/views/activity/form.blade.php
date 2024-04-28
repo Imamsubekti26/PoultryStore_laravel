@@ -31,6 +31,18 @@
               </select>
             </div>
           </div>
+          @if ($do == 'Edit')
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" for="status">Status</label>
+            <div class="col-sm-10">
+              <select id="status" class="form-select">
+                <option>Default select</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+              </select>
+            </div>
+          </div>
+          @endif
           <div class="row justify-content-end">
             <div class="col-sm-10">
               <button type="submit" class="btn btn-primary">{{ $do }}</button>
