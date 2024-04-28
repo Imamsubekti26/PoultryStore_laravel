@@ -23,6 +23,10 @@ Route::get('/login', function(){
     return view('login', ['title' => 'login']);
 });
 
+Route::get('/profile', function(){
+    return view('profile', ['title' => 'profile', 'selected_menu' => '']);
+});
+
 Route::get('activity', [ActivityController::class, 'index']);
 Route::get('activity/tambah', [ActivityController::class, 'create']);
 Route::get('activity/edit/{id}', [ActivityController::class, 'edit']);
