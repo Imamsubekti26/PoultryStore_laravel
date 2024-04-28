@@ -6,10 +6,6 @@
         <div class="d-flex align-items-center justify-content-between">
           <h5>Daftar {{ $title }}</h5>
           <div class="d-flex gap-3 align-items-center">
-            <div class="input-group">
-              <span class="input-group-text">pilih tanggal:</span>
-              <input type="date" class="form-control">
-            </div>
             <button class="btn btn-primary">Tambah</button>
           </div>
         </div>
@@ -18,11 +14,11 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th>Nama</th>
-              <th>Area</th>
-              <th>Telp</th>
-              <th>Jenis Kemitraan</th>
-              <th>Actions</th>
+              <th width="15%">Nama</th>
+              <th width="20%">Area</th>
+              <th width="15%">Telp</th>
+              <th width="40%">Jenis Kemitraan</th>
+              <th width="10%">Actions</th>
             </tr>
           </thead>
           <tbody class="table-border-bottom-0">
@@ -36,6 +32,7 @@
               <td>
                 <a href="#" class="text-black">
                   <i class="bx bx-edit-alt me-1"></i>
+                  Edit
                 </a>
               </td>
             </tr>

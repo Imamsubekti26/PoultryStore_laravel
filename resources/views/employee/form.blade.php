@@ -63,8 +63,18 @@
           </div>
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="password">Sandi (untuk login)</label>
-            <div class="col-sm-10">
-              <input type="password" class="form-control" id="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;">
+            <div class="col-sm-10 form-password-toggle">
+              <div class="input-group input-group-merge">
+                <input
+                  type="password"
+                  id="password"
+                  class="form-control"
+                  name="password"
+                  placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                  aria-describedby="password"
+                />
+                <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+              </div>
             </div>
           </div>
           <div class="row justify-content-end">

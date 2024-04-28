@@ -45,7 +45,7 @@
       'active' => $selected_menu == 'employee' || $selected_menu == 'salary',
       'open' => $selected_menu == 'employee' || $selected_menu == 'salary',
       ])">
-      <a class="menu-link menu-toggle">
+      <a class="menu-link menu-toggle cursor-pointer">
         <i class="menu-icon tf-icons bx bx-layout"></i>
         <div>Karyawan</div>
       </a>

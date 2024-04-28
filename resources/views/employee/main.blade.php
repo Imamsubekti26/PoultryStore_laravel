@@ -41,6 +41,7 @@
               <td>
                 <a href="#" class="text-black">
                   <i class="bx bx-edit-alt me-1"></i>
+                  Edit
                 </a>
               </td>
             </tr>
