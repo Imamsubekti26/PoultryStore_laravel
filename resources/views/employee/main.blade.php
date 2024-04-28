@@ -15,7 +15,7 @@
                 <option value="3">Sibuk/Trip</option>
               </select>
             </div>
-            <button class="btn btn-primary">Tambah</button>
+            <button class="btn btn-primary" onclick="href('employee/tambah')">Tambah</button>
           </div>
         </div>
       </div>

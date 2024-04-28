@@ -32,6 +32,7 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{ url('/assets/js/config.js') }}"></script>
+    <script>const base_url = "{{ url('') }}";</script>
 </head>
 <body>
   @yield('extended')
@@ -47,13 +48,12 @@
   <!-- endbuild -->
 
   <!-- Vendors JS -->
-  <script src="{{ url('../assets/vendor/libs/apex-charts/apexcharts.js') }}"></script>
 
   <!-- Main JS -->
   <script src="{{ url('../assets/js/main.js') }}"></script>
 
   <!-- Page JS -->
-  <script src="{{ url('../assets/js/dashboards-analytics.js') }}"></script>
+  <script src="{{ url('../assets/js/custom.js') }}"></script>
 
   <!-- Place this tag in your head or just before your close body tag. -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>

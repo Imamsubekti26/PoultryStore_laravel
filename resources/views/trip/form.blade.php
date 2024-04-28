@@ -12,41 +12,41 @@
       <div class="card-body">
         <form>
           <div class="mb-3">
-            <label class="form-label" for="plat">Tanggal</label>
-            <input type="date" class="form-control" id="plat" placeholder="ex: XX 1234 YY">
+            <label class="form-label" for="tanggal">Tanggal</label>
+            <input type="date" class="form-control" id="tanggal">
           </div>
           <div class="mb-3">
-            <label class="form-label" for="merk">Area</label>
-            <input type="text" class="form-control" id="merk" placeholder="ex: Lambo G200">
+            <label class="form-label" for="area">Area</label>
+            <input type="text" class="form-control" id="area" placeholder="kecamatan, kabupaten">
           </div>
           <div class="mb-3">
-            <label class="form-label" for="merk">Estimasi</label>
-            <input type="text" class="form-control" id="merk" placeholder="ex: Lambo G200">
+            <label class="form-label" for="estimasi">Estimasi (jam)</label>
+            <input type="number" class="form-control" id="estimasi" placeholder="perkiraan lama pekerjaan dalam jam">
           </div>
           <div class="mb-3">
-            <label class="form-label" for="kondisi">Petugas 1</label>
-            <select id="kondisi" class="form-select">
+            <label class="form-label" for="petugas-1">Petugas 1</label>
+            <select id="petugas-1" class="form-select">
               <option>Default select</option>
               <option value="1">Free</option>
             </select>
           </div>
           <div class="mb-3">
-            <label class="form-label" for="kondisi">Petugas 2</label>
-            <select id="kondisi" class="form-select">
+            <label class="form-label" for="petugas-2">Petugas 2</label>
+            <select id="petugas-2" class="form-select">
               <option>Default select</option>
               <option value="1">Free</option>
             </select>
           </div>
           <div class="mb-3">
-            <label class="form-label" for="kondisi">Mobil</label>
-            <select id="kondisi" class="form-select">
+            <label class="form-label" for="mobil">Mobil</label>
+            <select id="mobil" class="form-select">
               <option>Default select</option>
               <option value="1">Free</option>
             </select>
           </div>
           <div class="mb-3">
-            <label class="form-label" for="kondisi">Status</label>
-            <select id="kondisi" class="form-select">
+            <label class="form-label" for="status">Status</label>
+            <select id="status" class="form-select">
               <option>Default select</option>
               <option value="1">Dijadwalkan</option>
               <option value="1">Dikerjakan</option>
@@ -56,7 +56,7 @@
           </div>
           <div>
             <button type="submit" class="btn btn-primary">{{ $do }}</button>
-            <a href="{{ url('car') }}" type="button" class="btn btn-outline-secondary">kembali</a>
+            <a href="{{ url('trip') }}" type="button" class="btn btn-outline-secondary">kembali</a>
           </div>
         </form>
       </div>

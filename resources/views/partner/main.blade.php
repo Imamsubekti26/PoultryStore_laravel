@@ -6,7 +6,7 @@
         <div class="d-flex align-items-center justify-content-between">
           <h5>Daftar {{ $title }}</h5>
           <div class="d-flex gap-3 align-items-center">
-            <button class="btn btn-primary">Tambah</button>
+            <button class="btn btn-primary" onclick="href('partner/tambah')">Tambah</button>
           </div>
         </div>
       </div>

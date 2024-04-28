@@ -10,7 +10,7 @@
               <span class="input-group-text">tanggal:</span>
               <input type="date" class="form-control">
             </div>
-            <button class="btn btn-primary">Tambah</button>
+            <button class="btn btn-primary" onclick="href('activity/tambah')">Tambah</button>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
               <td>27/04/24</td>
               <td>Pak Hendri</td>
               <td>Lendah, Kulon Progo</td>
-              <td><span class="badge bg-label-primary me-1">trip 270424.01</span></td>
+              <td><a href="#" class="badge bg-label-primary me-1">trip 270424.01</a></td>
               <td>
                 <a href="#" class="badge text-black">
                   <i class="bx bx-edit-alt me-1"></i>

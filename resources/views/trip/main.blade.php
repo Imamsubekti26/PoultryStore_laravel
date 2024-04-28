@@ -10,7 +10,7 @@
               <span class="input-group-text">tanggal:</span>
               <input type="date" class="form-control">
             </div>
-            <button class="btn btn-primary">Tambah</button>
+            <button class="btn btn-primary" onclick="href('trip/tambah')">Tambah</button>
           </div>
         </div>
       </div>

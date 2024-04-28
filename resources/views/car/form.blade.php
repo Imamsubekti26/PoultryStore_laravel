@@ -12,13 +12,13 @@
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="plat">Nomor Plat</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="plat" placeholder="ex: XX 1234 YY">
+              <input type="text" class="form-control" id="plat" placeholder="ex: AB 1234 LL">
             </div>
           </div>
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="merk">merk dan tipe</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="merk" placeholder="ex: Lambo G200">
+              <input type="text" class="form-control" id="merk" placeholder="ex: Mitsubishi Colt L300">
             </div>
           </div>
           <div class="row mb-3">

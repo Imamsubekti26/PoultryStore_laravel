@@ -12,13 +12,13 @@
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="nama-ktp">Nama sesuai KTP</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="nama-ktp" placeholder="ket: nama sesuai KTP">
+              <input type="text" class="form-control" id="nama-ktp" placeholder="nama sesuai KTP">
             </div>
           </div>
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="nik">NIK</label>
             <div class="col-sm-10">
-              <input type="number" class="form-control" id="nik" placeholder="ket: 16 digit">
+              <input type="number" class="form-control" id="nik" placeholder="16 digit nomor KTP">
             </div>
           </div>
           <div class="row mb-3">
@@ -46,19 +46,19 @@
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="gaji">Gaji Pokok</label>
             <div class="col-sm-10">
-              <input type="number" class="form-control" id="gaji" placeholder="ket: gaji pokok / bulan">
+              <input type="number" class="form-control" id="gaji" placeholder="gaji pokok / bulan dalam rupiah">
             </div>
           </div>
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="nama-panggilan">Nama Panggilan</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="nama-panggilan" placeholder="ket: bagaimana orang-orang memanggil anda">
+              <input type="text" class="form-control" id="nama-panggilan" placeholder="bagaimana orang-orang memanggil anda">
             </div>
           </div>
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="nama-pengguna">Nama Pengguna</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="nama-pengguna" placeholder="ket: username untuk masuk ke aplikasi">
+              <input type="text" class="form-control" id="nama-pengguna" placeholder="username untuk masuk ke aplikasi">
             </div>
           </div>
           <div class="row mb-3">
