@@ -4,6 +4,7 @@ use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\partnerController;
+use App\Http\Controllers\SalaryController;
 use App\Http\Controllers\TripController;
 use Illuminate\Support\Facades\Route;
 
@@ -46,3 +47,6 @@ Route::get('employee/edit/{id}', [EmployeeController::class, 'edit']);
 Route::get('trip', [TripController::class, 'index']);
 Route::get('trip/tambah', [TripController::class, 'create']);
 Route::get('trip/edit/{id}', [TripController::class, 'edit']);
+
+Route::get('salary', [SalaryController::class, 'index']);
+Route::get('salary/tambah/{id}', [SalaryController::class, 'create']);
