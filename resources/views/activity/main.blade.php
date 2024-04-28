@@ -18,9 +18,10 @@
         <table class="table table-striped">
           <thead>
             <tr>
-              <th width="40%">Rincian Pekerjaan</th>
+              <th width="30%">Rincian Pekerjaan</th>
               <th width="10%">Tanggal</th>
-              <th width="25%">Tujuan</th>
+              <th width="15%">Tujuan</th>
+              <th width="20%">Area</th>
               <th width="15%">Status</th>
               <th width="10%">Actions</th>
             </tr>
@@ -29,6 +30,7 @@
             <tr>
               <td>Mengantar Pakan 10 sak</td>
               <td>27/04/24</td>
+              <td>Pak Hendri</td>
               <td>Lendah, Kulon Progo</td>
               <td><span class="badge bg-label-primary me-1">trip 270424.01</span></td>
               <td>
