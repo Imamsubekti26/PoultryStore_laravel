@@ -86,6 +86,7 @@
         </form>
       </div>
     </div>
+    @if ($do == 'Edit')
     <div class="card mb-4">
       <div class="card-header d-flex align-items-center justify-content-between">
         <h5>Gaji</h5>
@@ -121,4 +122,5 @@
         </table>
       </div>
     </div>
+    @endif
 @endsection

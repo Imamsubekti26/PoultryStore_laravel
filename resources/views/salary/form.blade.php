@@ -22,6 +22,12 @@
             </div>
           </div>
           <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" for="tanggal">Tanggal</label>
+            <div class="col-sm-10">
+              <input type="date" class="form-control" id="tanggal">
+            </div>
+          </div>
+          <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="jabatan">Jenis Aksi</label>
             <div class="col-sm-10">
               <select id="jabatan" class="form-select">

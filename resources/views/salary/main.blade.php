@@ -17,7 +17,7 @@
               <th>Nama</th>
               <th>Bulan</th>
               <th>Upah</th>
-              <th>Upah</th>
+              <th>Status</th>
               <th>Actions</th>
             </tr>
           </thead>
