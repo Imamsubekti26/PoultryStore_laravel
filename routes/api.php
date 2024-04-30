@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\PartnerController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,3 +21,9 @@ Route::get('/partner/{id}', [PartnerController::class, 'show']);
 Route::post('/partner', [PartnerController::class, 'store']);
 Route::put('/partner/{id}', [PartnerController::class, 'update']);
 Route::delete('/partner/{id}', [PartnerController::class, 'destroy']);
+
+Route::get('/employee', [EmployeeController::class, 'list']);
+Route::get('/employee/{id}', [EmployeeController::class, 'show']);
+Route::post('/employee', [EmployeeController::class, 'store']);
+Route::put('/employee/{id}', [EmployeeController::class, 'update']);
+Route::delete('/employee/{id}', [EmployeeController::class, 'destroy']);
