@@ -2,31 +2,58 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class ActivityController extends Controller
 {
-    public function index()
+    /**
+     * Create a new class instance.
+     */
+    public function __construct()
     {
-        $data['title'] = 'Aktifitas';
-        $data['selected_menu'] = 'activity';
-        return view('activity.main', $data);
+        $this->setTitle('aktivitas', 'activity');
     }
 
-    public function create()
+    /**
+     * Send batch of data.
+     */
+    public function list(Request $request): JsonResponse
     {
-        $data['do'] = 'Tambah';
-        $data['title'] = 'Aktifitas';
-        $data['selected_menu'] = 'activity';
-        return view('activity.form', $data);
+        return response()->json([]);
     }
 
-    public function edit(string $id)
+    /**
+     * Send a single data depend on id.
+     */
+    public function show(string $id): JsonResponse
     {
-        $data['do'] = 'Edit';
-        $data['title'] = 'Aktifitas';
-        $data['selected_menu'] = 'activity';
-        return view('activity.form', $data);
+        return response()->json([]);
+    }
+
+    /**
+     * Store data to database.
+     */
+    public function store(Request $request): JsonResponse
+    {
+        return response()->json([]);
+    }
+
+    /**
+     * Update data in database depend on id.
+     */
+    public function update(Request $request, string $id): JsonResponse
+    {
+        return response()->json([]);
+    }
+
+    /**
+     * Delete data from database depend on id.
+     */
+    public function destroy(string $id): JsonResponse
+    {
+        return response()->json([]);
     }
 
 }
