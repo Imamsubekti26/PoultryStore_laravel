@@ -32,7 +32,16 @@
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{ url('/assets/js/config.js') }}"></script>
-    <script>const base_url = "{{ url('') }}";</script>
+
+    <!-- init variable from php to js -->
+    <script>
+      const base_url = "{{ url('') }}"
+      const from_php = {
+        data_id : {{ isset($data_id) ? $data_id : 0 }},
+        do : "{{ isset($do) ? $do : null }}",
+        selected_menu : "{{ isset($selected_menu) ? $selected_menu : null }}"
+      }
+    </script>
 </head>
 <body>
   @yield('extended')
@@ -53,6 +62,7 @@
   <script src="{{ url('../assets/js/main.js') }}"></script>
 
   <!-- Page JS -->
+  <script src="{{ url('../assets/js/crud_action.js') }}"></script>
   <script src="{{ url('../assets/js/custom.js') }}"></script>
 
   <!-- Place this tag in your head or just before your close body tag. -->

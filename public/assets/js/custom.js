@@ -1,26 +1,10 @@
-function href(target) {
-  window.location.href = `${base_url}/${target}` 
-}
 
-function deleteEntity(id, url) {
-  if(!confirm("Apakah anda yakin untuk menghapus data ini?")){
-    return
-  }
-
-  fetch(`${base_url}/api/${url}/delete/${id}`, {
-    method : 'DELETE',
-    headers : {}
-  })
-  .then(raw => raw.json)
-  .then(res => {
-    if(res.isSuccess === true && res.error === null){
-      window.location.href = `${base_url}/${url}`
-    } else {
-      showError(res.error)
-    }
-  })
-}
-
-function showError(msg){
-  console.error(msg)
+if (from_php.do === 'Edit'){
+  cf().form('#form-car').show(from_php.selected_menu, from_php.data_id);
+  $('#btn-submit').click(()=> cf().form('#form-car').update(from_php.selected_menu, from_php.data_id))
+  $('#btn-delete').click(()=> cf().destroy(from_php.selected_menu, from_php.data_id))
+} else if (from_php.do === 'Tambah') {
+  $('#btn-submit').click(()=> cf().form('#form-car').store(from_php.selected_menu))
+} else {
+  cf().list(from_php.selected_menu)
 }
