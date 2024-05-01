@@ -24,8 +24,10 @@ class CarController extends Controller
     public function list(Request $request): JsonResponse
     {
         try {
-            $data = Car::all();            
-            return response()->json(GenerateResponse::success($data));
+            $data = Car::with('trip')->get();
+            $generatedResponse = GenerateResponse::success($data);
+            $generatedResponse['view'] = View($this->title['en'].'/table', ['table' => $data])->render();
+            return response()->json($generatedResponse);
         } catch (\Throwable $th) {            
             return response()->json(GenerateResponse::failed("failed to getting data: ".$th->getMessage()), 500);
         }
@@ -54,8 +56,8 @@ class CarController extends Controller
     public function store(Request $request): JsonResponse
     {
         $form = [
-            'plat' => $request->plat,
-            'merk' => $request->merk
+            'plat' => $request->input('plat'),
+            'merk' => $request->input('merk')
         ];
 
         try {
@@ -75,9 +77,9 @@ class CarController extends Controller
     public function update(Request $request, string $id): JsonResponse
     {
         $form = [
-            'plat' => $request->plat,
-            'merk' => $request->merk,
-            'status' => $request->status,
+            'plat' => $request->input('plat'),
+            'merk' => $request->input('merk'),
+            'status' => $request->input('status'),
         ];
 
         try {

@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Car extends Model
 {
@@ -12,8 +12,8 @@ class Car extends Model
 
     protected $guarded = [];
 
-    public function trip(): HasOne
+    public function trip(): HasMany
     {
-        return $this->hasOne(Trip::class);
+        return $this->hasMany(Trip::class, 'car');
     }
 }
