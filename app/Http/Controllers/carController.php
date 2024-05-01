@@ -27,7 +27,7 @@ class CarController extends Controller
             $data = Car::all();            
             return response()->json(GenerateResponse::success($data));
         } catch (\Throwable $th) {            
-            return response()->json(GenerateResponse::failed("failed to getting data: $th"), 500);
+            return response()->json(GenerateResponse::failed("failed to getting data: ".$th->getMessage()), 500);
         }
     }
 
@@ -44,7 +44,7 @@ class CarController extends Controller
             return response()->json(GenerateResponse::success($data));
         } catch (\Throwable $th) {
             $error_code = $th == 'data not found' ? 404 : 500 ;
-            return response()->json(GenerateResponse::failed("failed to getting data: $th"), $error_code);
+            return response()->json(GenerateResponse::failed("failed to getting data: ".$th->getMessage()), $error_code);
         }
     }
 
@@ -65,7 +65,7 @@ class CarController extends Controller
             }
             return response()->json(GenerateResponse::success($result), 201);
         } catch (\Throwable $th) {            
-            return response()->json(GenerateResponse::failed("failed to adding data: $th"), 500);
+            return response()->json(GenerateResponse::failed("failed to adding data: ".$th->getMessage()), 500);
         }
     }
 
@@ -87,7 +87,7 @@ class CarController extends Controller
             }
             return response()->json(GenerateResponse::success(['affected_row' => $result]));
         } catch (\Throwable $th) {            
-            return response()->json(GenerateResponse::failed("failed to updating data: $th"), 500);
+            return response()->json(GenerateResponse::failed("failed to updating data: ".$th->getMessage()), 500);
         }
     }
 
@@ -103,7 +103,7 @@ class CarController extends Controller
             }
             return response()->json(GenerateResponse::success(['affected_row' => $result]));
         } catch (\Throwable $th) {            
-            return response()->json(GenerateResponse::failed("failed to remove data: $th"), 500);
+            return response()->json(GenerateResponse::failed("failed to remove data: ".$th->getMessage()), 500);
         }
     }
 }

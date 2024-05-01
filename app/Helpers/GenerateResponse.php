@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Helpers;
-use Illuminate\Database\Eloquent;
 
 class GenerateResponse
 {
@@ -17,7 +16,7 @@ class GenerateResponse
         ];
     }
 
-    /**\
+    /**
      * 
      */
     public static function failed(string $msg): array
