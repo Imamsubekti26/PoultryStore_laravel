@@ -8,7 +8,7 @@
         @endif
       </div>
       <div class="card-body">
-        <form id="form-car">
+        <form id="form-data">
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="plat">Nomor Plat</label>
             <div class="col-sm-10">

@@ -16,14 +16,13 @@ return new class extends Migration
             $table->string('surename');
             $table->string('nik');
             $table->string('address');
-            $table->string('area');
             $table->string('phone');
             $table->string('position');
             $table->integer('base_salary');
             $table->string('username');
             $table->string('nickname');
             $table->string('password');
-            $table->enum('status', ['free', 'busy', 'off']);
+            $table->enum('status', ['free', 'busy', 'off'])->default('off');
             $table->unsignedBigInteger('trip')->nullable();
             $table->softDeletes();
             $table->timestamps();

@@ -25,8 +25,10 @@ class EmployeeController extends Controller
     public function list(Request $request): JsonResponse
     {
         try {
-            $data = Employee::all();            
-            return response()->json(GenerateResponse::success($data));
+            $data = Employee::with('trip')->get();
+            $generatedResponse = GenerateResponse::success($data);
+            $generatedResponse['view'] = View($this->title['en'].'/table', ['table' => $data])->render();
+            return response()->json($generatedResponse);
         } catch (\Throwable $th) {            
             return response()->json(GenerateResponse::failed("failed to getting data: ".$th->getMessage()), 500);
         }
@@ -58,7 +60,6 @@ class EmployeeController extends Controller
             'surename' => $request->surename,
             'nik' => $request->nik,
             'address' => $request->address,
-            'area' => $request->area,
             'phone' => $request->phone,
             'position' => $request->position,
             'base_salary' => $request->base_salary,
@@ -87,7 +88,6 @@ class EmployeeController extends Controller
             'surename' => $request->surename,
             'nik' => $request->nik,
             'address' => $request->address,
-            'area' => $request->area,
             'phone' => $request->phone,
             'position' => $request->position,
             'base_salary' => $request->base_salary,

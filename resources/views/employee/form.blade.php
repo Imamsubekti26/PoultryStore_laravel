@@ -4,61 +4,61 @@
       <div class="card-header d-flex align-items-center justify-content-between">
         <h5 class="mb-0">{{ $do.' '.$title }}</h5>
         @if ($do == 'Edit')
-          <button class="btn btn-sm btn-outline-danger">Hapus Data Ini</button>
+          <button class="btn btn-sm btn-outline-danger" id="btn-delete">Hapus Data Ini</button>
         @endif
       </div>
       <div class="card-body">
-        <form>
+        <form id="form-data">
           <div class="row mb-3">
-            <label class="col-sm-2 col-form-label" for="nama-ktp">Nama sesuai KTP</label>
+            <label class="col-sm-2 col-form-label" for="surename">Nama sesuai KTP</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="nama-ktp" placeholder="nama sesuai KTP">
+              <input type="text" class="form-control" id="surename" placeholder="nama sesuai KTP" name="surename">
             </div>
           </div>
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="nik">NIK</label>
             <div class="col-sm-10">
-              <input type="number" class="form-control" id="nik" placeholder="16 digit nomor KTP">
+              <input type="number" class="form-control" id="nik" placeholder="16 digit nomor KTP" name="nik">
             </div>
           </div>
           <div class="row mb-3">
-            <label class="col-sm-2 col-form-label" for="alamat">Alamat</label>
+            <label class="col-sm-2 col-form-label" for="address">Alamat</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="alamat" placeholder="alamat lengkap">
+              <input type="text" class="form-control" id="address" placeholder="alamat lengkap" name="address">
             </div>
           </div>
           <div class="row mb-3">
-            <label class="col-sm-2 col-form-label" for="nomor-telpon">Nomor Telpon</label>
+            <label class="col-sm-2 col-form-label" for="phone">Nomor Telpon</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="nomor-telpon" placeholder="ex: 08123...">
+              <input type="text" class="form-control" id="phone" placeholder="ex: 08123..." name="phone">
             </div>
           </div>
           <div class="row mb-3">
-            <label class="col-sm-2 col-form-label" for="jabatan">Jabatan</label>
+            <label class="col-sm-2 col-form-label" for="position">Jabatan</label>
             <div class="col-sm-10">
-              <select id="jabatan" class="form-select">
-                <option value="1">Junior Worker</option>
-                <option value="2">Senior Worker</option>
-                <option value="3">Officer</option>
+              <select id="position" class="form-select" name="position">
+                <option value="junior worker">Junior Worker</option>
+                <option value="senior worker">Senior Worker</option>
+                <option value="officer">Officer</option>
               </select>
             </div>
           </div>
           <div class="row mb-3">
-            <label class="col-sm-2 col-form-label" for="gaji">Gaji Pokok</label>
+            <label class="col-sm-2 col-form-label" for="base_salary">Gaji Pokok</label>
             <div class="col-sm-10">
-              <input type="number" class="form-control" id="gaji" placeholder="gaji pokok / bulan dalam rupiah">
+              <input type="number" class="form-control" id="base_salary" placeholder="gaji pokok / bulan dalam rupiah" name="base_salary">
             </div>
           </div>
           <div class="row mb-3">
-            <label class="col-sm-2 col-form-label" for="nama-panggilan">Nama Panggilan</label>
+            <label class="col-sm-2 col-form-label" for="nickname">Nama Panggilan</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="nama-panggilan" placeholder="bagaimana orang-orang memanggil anda">
+              <input type="text" class="form-control" id="nickname" placeholder="bagaimana orang-orang memanggil anda" name="nickname">
             </div>
           </div>
           <div class="row mb-3">
-            <label class="col-sm-2 col-form-label" for="nama-pengguna">Nama Pengguna</label>
+            <label class="col-sm-2 col-form-label" for="username">Nama Pengguna</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="nama-pengguna" placeholder="username untuk masuk ke aplikasi">
+              <input type="text" class="form-control" id="username" placeholder="username untuk masuk ke aplikasi" name="username">
             </div>
           </div>
           <div class="row mb-3">
@@ -79,7 +79,7 @@
           </div>
           <div class="row justify-content-end">
             <div class="col-sm-10">
-              <button type="submit" class="btn btn-primary">{{ $do }}</button>
+              <button type="submit" class="btn btn-primary" id="btn-submit">{{ $do }}</button>
               <a href="{{ url('employee') }}" type="button" class="btn btn-outline-secondary">kembali</a>
             </div>
           </div>

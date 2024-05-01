@@ -14,6 +14,16 @@ class Trip extends Model
 
     public function car(): BelongsTo
     {
-        return $this->belongsTo(Car::class);
+        return $this->belongsTo(Car::class, 'car');
+    }
+
+    public function employee1(): BelongsTo
+    {
+        return $this->belongsTo(Employee::class, 'employee1');
+    }
+
+    public function employee2(): BelongsTo
+    {
+        return $this->belongsTo(Employee::class, 'employee2');
     }
 }

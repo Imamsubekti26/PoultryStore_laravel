@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Employee extends Model
@@ -12,17 +12,17 @@ class Employee extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $guarded = ['password'];
+    protected $guarded = [];
 
-    public function trip(): HasOne
-    {
-        return $this->hasOne(Trip::class);
-    }
-
+    protected $hidden = ['password'];
+    
     protected function casts(): array
     {
-        return [
-            'password' => 'hashed',
-        ];
+        return [ 'password' => 'hashed'];
+    }
+    
+    public function trip(): HasMany
+    {
+        return $this->hasMany(Trip::class, 'employee1');
     }
 }

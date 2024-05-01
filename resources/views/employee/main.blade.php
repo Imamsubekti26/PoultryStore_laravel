@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="table-responsive text-nowrap">
-        <table class="table table-striped">
+        <table class="table table-striped" id="table-data">
           <thead>
             <tr>
               <th>Nama</th>
@@ -29,23 +29,7 @@
               <th>Actions</th>
             </tr>
           </thead>
-          <tbody class="table-border-bottom-0">
-            <tr>
-              <td>Pak Bee</td>
-              <td>
-                <a href="#" class="badge bg-label-primary me-1">trip 270424.01</a>
-              </td>
-              <td>
-                <a href="#">088237234829</a>
-              </td>
-              <td>
-                <a href="#" class="text-black">
-                  <i class="bx bx-edit-alt me-1"></i>
-                  Edit
-                </a>
-              </td>
-            </tr>
-          </tbody>
+          <tbody class="table-border-bottom-0"></tbody>
         </table>
       </div>
     </div>
