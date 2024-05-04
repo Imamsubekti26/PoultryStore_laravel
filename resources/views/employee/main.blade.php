@@ -8,11 +8,11 @@
           <div class="d-flex gap-3 align-items-center">
             <div class="input-group">
               <span class="input-group-text">filter:</span>
-              <select id="filter" class="form-select">
-                <option value="1">Semua</option>
-                <option value="1">Nganggur</option>
-                <option value="2">Tidak di Kantor</option>
-                <option value="3">Sibuk/Trip</option>
+              <select id="filter" class="form-select" name="filter">
+                <option value="all">Semua</option>
+                <option value="free" selected>Nganggur</option>
+                <option value="off">Tidak di Kantor</option>
+                <option value="busy">Sibuk/Trip</option>
               </select>
             </div>
             <button class="btn btn-primary" onclick="href('employee/tambah')">Tambah</button>

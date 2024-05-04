@@ -6,5 +6,18 @@ if (from_php.do === 'Edit'){
 } else if (from_php.do === 'Tambah') {
   $('#btn-submit').click(()=> cf().form('#form-data').store(from_php.selected_menu))
 } else {
-  cf().list(from_php.selected_menu)
+  const filterField = $('#filter')
+  
+  if(filterField.length){
+    const nameofField = filterField.attr('name')
+    const filterObj = `${nameofField}=${filterField.val()}`;
+    cf().list(from_php.selected_menu, filterObj);
+
+    filterField.change(()=>{
+        const filterObj = `${nameofField}=${filterField.val()}`;
+        cf().list(from_php.selected_menu, filterObj);
+    })
+  } else {
+    cf().list(from_php.selected_menu)
+  }
 }

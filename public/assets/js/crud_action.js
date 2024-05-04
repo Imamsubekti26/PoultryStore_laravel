@@ -3,6 +3,7 @@
 function cf(){
   return {
     _form : null,
+
     form : function(idForm){
       $(idForm).submit( function(event){event.preventDefault()})
       this._form = dataForm(idForm)
@@ -11,7 +12,6 @@ function cf(){
 
     store : function(targetApi) {
       const data = this._form.GetData()
-      console.log(data);
       fetch(`${base_url}/api/${targetApi}`, {
         method : 'POST',
         headers : {
@@ -36,20 +36,21 @@ function cf(){
       .then(res => nextAction(`${targetApi}`, res))
     },
 
-    list : function(targetApi) {
-      fetch(`${base_url}/api/${targetApi}`, {
+    list : function(targetApi, data = null) {
+      const realUrl = data !== null ? `${base_url}/api/${targetApi}?${data}` : `${base_url}/api/${targetApi}`
+      fetch(realUrl, {
         method : 'GET'
       })
       .then(raw => raw.json())
       .then(res => {
         const tbody = $("#table-data tbody")
-        tbody.append(res.view)
+        tbody.empty().append(res.view)
       })
     },
 
     show : function(targetApi, id) {
       fetch(`${base_url}/api/${targetApi}/${id}`, {
-        method : 'GET'
+        method : 'GET',
       })
       .then(raw => raw.json())
       .then(res => this._form.Fill(res.data))

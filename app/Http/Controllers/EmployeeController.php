@@ -25,7 +25,13 @@ class EmployeeController extends Controller
     public function list(Request $request): JsonResponse
     {
         try {
-            $data = Employee::with('trip')->get();
+            
+            if ($request->input('filter') == 'all') {
+                $data = Employee::with('trip')->get();
+            } else {
+                $data = Employee::where('status', $request->input('filter'))->with('trip')->get();
+            }
+
             $generatedResponse = GenerateResponse::success($data);
             $generatedResponse['view'] = View($this->title['en'].'/table', ['table' => $data])->render();
             return response()->json($generatedResponse);
