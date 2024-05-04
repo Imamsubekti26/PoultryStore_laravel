@@ -8,7 +8,7 @@
           <div class="d-flex gap-3 align-items-center">
             <div class="input-group">
               <span class="input-group-text">tanggal:</span>
-              <input type="date" class="form-control">
+              <input type="date" id="filter" name="date" class="form-control" value="{{ $today['date'] }}">
             </div>
             <button class="btn btn-primary" onclick="href('trip/tambah')">Tambah</button>
           </div>
