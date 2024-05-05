@@ -30,3 +30,8 @@
     </div>
   <!-- Layout wrapper -->
 @endsection
+
+@section('custom-script')
+@parent
+<script src="{{ url('../assets/js/custom.js') }}"></script>
+@endsection

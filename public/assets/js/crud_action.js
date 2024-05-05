@@ -37,7 +37,8 @@ function cf(){
     },
 
     list : function(targetApi, data = null) {
-      const realUrl = data !== null ? `${base_url}/api/${targetApi}?${data}` : `${base_url}/api/${targetApi}`
+      const queryString = data !== null ? Object.keys(data).map(key => key + '=' + data[key]).join('&') : ''
+      const realUrl = `${base_url}/api/${targetApi}?${queryString}`
       fetch(realUrl, {
         method : 'GET'
       })

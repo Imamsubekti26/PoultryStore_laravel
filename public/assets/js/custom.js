@@ -9,12 +9,13 @@ if (from_php.do === 'Edit'){
   const filterField = $('#filter')
   
   if(filterField.length){
+    let filterObj = {}
     const nameofField = filterField.attr('name')
-    const filterObj = `${nameofField}=${filterField.val()}`;
+    filterObj[nameofField] = filterField.val();
     cf().list(from_php.selected_menu, filterObj);
 
     filterField.change(()=>{
-        const filterObj = `${nameofField}=${filterField.val()}`;
+        filterObj[nameofField] = filterField.val();
         cf().list(from_php.selected_menu, filterObj);
     })
   } else {
