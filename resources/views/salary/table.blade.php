@@ -17,6 +17,10 @@
           <i class="bx bx-edit-alt me-1"></i>
           Tambah Bonus/Pinalty
         </a>
+        <a href="{{ url('salary/edit/'.$item->id) }}" class="text-black">
+          <i class="bx bx-edit-alt me-1"></i>
+          Tandai sudah lunas
+        </a>
       </td>
     </tr>
 @endforeach

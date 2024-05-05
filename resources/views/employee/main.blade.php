@@ -10,7 +10,7 @@
               <span class="input-group-text">filter:</span>
               <select id="filter" class="form-select" name="filter">
                 <option value="all">Semua</option>
-                <option value="free" selected>Nganggur</option>
+                <option value="free">Nganggur</option>
                 <option value="off">Tidak di Kantor</option>
                 <option value="busy">Sibuk/Trip</option>
               </select>

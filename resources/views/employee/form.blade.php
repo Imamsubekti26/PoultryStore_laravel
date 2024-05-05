@@ -93,18 +93,19 @@
         <div class="d-flex gap-3 align-items-center">
           <div class="input-group">
             <span class="input-group-text">bulan:</span>
-            <input type="month" class="form-control">
+            <input type="month" class="form-control" id="filter" value="{{ $today['month'] }}" name="month">
           </div>
-          <button class="btn btn-primary" onclick="href('salary/tambah')">Tambah</button>
+          <button class="btn btn-primary" onclick="href('salary/tambah/{{ $data_id }}')">Tambah</button>
         </div>
       </div>
       <div class="mx-4">
-        <p>Total Pendapatan: <b>2.000.000</b></p>
+        <p>Total Pendapatan: <b id="this-month-salary">...</b></p>
+        <p>Status: <b id="salary-status">...</b></p>
         <hr>
         <p><b>Rincian: </b></p>
       </div>
       <div class="table-responsive text-nowrap">
-        <table class="table table-striped">
+        <table class="table table-striped" id="table-data">
           <thead>
             <tr>
               <th width="30%">Pekerjaan</th>
@@ -112,15 +113,15 @@
               <th width="10%">Tanggal</th>
             </tr>
           </thead>
-          <tbody class="table-border-bottom-0">
-            <tr>
-              <td>Gaji Bulanan</td>
-              <td>1.000.000</td>
-              <td>27/04/2024</td>
-            </tr>
-          </tbody>
+          <tbody class="table-border-bottom-0"></tbody>
         </table>
       </div>
     </div>
     @endif
 @endsection
+
+@if ($do == 'Edit')
+@section('custom-script')
+  <script src="{{ url('/assets/js/employee_edit.js') }}"></script>  
+@endsection
+@endif

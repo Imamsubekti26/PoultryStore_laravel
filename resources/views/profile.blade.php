@@ -98,6 +98,7 @@
       </div>
       <div class="mx-4">
         <p>Total Pendapatan: <b>2.000.000</b></p>
+        <p>Status: <b>Delayed</b></p>
         <hr>
         <p><b>Rincian: </b></p>
       </div>
