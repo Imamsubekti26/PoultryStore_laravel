@@ -25,4 +25,14 @@ class Employee extends Model
     {
         return $this->hasMany(Trip::class, 'employee1');
     }
+
+    public function salary(): HasMany
+    {
+        return $this->hasMany(Salary::class,'employee');
+    }
+    
+    public function wage(): HasMany
+    {
+        return $this->hasMany(Salary::class,'employee');
+    }
 }
