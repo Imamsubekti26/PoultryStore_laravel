@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\PartnerController;
@@ -10,6 +11,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
+
+Route::get('/activity', [ActivityController::class, 'list']);
+Route::get('/activity/{id}', [ActivityController::class, 'show']);
+Route::post('/activity', [ActivityController::class, 'store']);
+Route::put('/activity/{id}', [ActivityController::class, 'update']);
+Route::delete('/activity/{id}', [ActivityController::class, 'destroy']);
 
 Route::get('/car', [CarController::class, 'list']);
 Route::get('/car/{id}', [CarController::class, 'show']);

@@ -2,8 +2,8 @@
     <tr>
       <td>{{ $item->detail }}</td>
       <td>{{ $item->date }}</td>
-      <td>{{ $item->partner->name }}</td>
-      <td>{{ $item->partner->area }}</td>
+      <td>{{ $item->partners->name }}</td>
+      <td>{{ $item->partners->area }}</td>
       <td>
         @if ($item->status == 'delivered')
         <a href="#" class="badge bg-label-primary me-1">TRIP {{ $item->trip->id }}</a>

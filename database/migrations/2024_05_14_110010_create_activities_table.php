@@ -11,15 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('wages', function (Blueprint $table) {
+        Schema::create('activities', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('employee');
-            $table->string('reason');
+            $table->string('detail');
             $table->date('date');
-            $table->bigInteger('amount');
+            $table->enum('status', ['scheduled', 'delivered', 'canceled', 'done'])->default('scheduled');
+            $table->unsignedBigInteger('partner');
+            $table->unsignedBigInteger('trip')->nullable();
             $table->timestamps();
 
-            $table->foreign('employee')->references('id')->on('employees');
+            $table->foreign('partner')->references('id')->on('partners');
         });
     }
 
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('wages');
+        Schema::dropIfExists('activities');
     }
 };

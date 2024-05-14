@@ -26,12 +26,12 @@ class Employee extends Model
         return $this->hasMany(Trip::class, 'employee1');
     }
 
-    public function salary(): HasMany
+    public function salaries(): HasMany
     {
         return $this->hasMany(Salary::class,'employee');
     }
     
-    public function wage(): HasMany
+    public function wages(): HasMany
     {
         return $this->hasMany(Salary::class,'employee');
     }

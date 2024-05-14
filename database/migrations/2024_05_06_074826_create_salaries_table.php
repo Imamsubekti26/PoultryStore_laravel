@@ -18,6 +18,8 @@ return new class extends Migration
             $table->bigInteger('salary');
             $table->enum('status',['deleyed','paid']);
             $table->timestamps();
+
+            $table->foreign('employee')->references('id')->on('employees');
         });
     }
 

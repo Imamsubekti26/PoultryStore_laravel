@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Trip extends Model
 {
@@ -12,7 +13,12 @@ class Trip extends Model
 
     protected $guarded = [];
 
-    public function car(): BelongsTo
+    public function activity(): HasMany
+    {
+        return $this->hasMany(Activity::class, 'trip');
+    }
+
+    public function cars(): BelongsTo
     {
         return $this->belongsTo(Car::class, 'car');
     }

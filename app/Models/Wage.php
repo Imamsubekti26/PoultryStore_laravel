@@ -10,7 +10,7 @@ class Wage extends Model
 {
     use HasFactory;
     protected $guarded = [];
-    public function employee(): BelongsTo
+    public function employees(): BelongsTo
     {
         return $this->belongsTo(Employee::class);
     }

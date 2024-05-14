@@ -102,6 +102,10 @@ class EmployeeController extends Controller
             'password' => Hash::make($request->password),
         ];
 
+        if($form['password'] == ''){
+            unset($form['password']);
+        }
+
         try {
             $result = Employee::whereKey($id)->update($form);
             if($result == 0){
